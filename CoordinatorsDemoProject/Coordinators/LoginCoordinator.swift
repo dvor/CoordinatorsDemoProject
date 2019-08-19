@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol LoginCoordinatorDelegate: class {
+    func loginCoordinatorDidLogIn()
+}
+
 class LoginCoordinator {
     private let navigation: UINavigationController
     private let authService: AuthenticationService
+
+    weak var delegate: LoginCoordinatorDelegate?
 
     init(navigation: UINavigationController, authService: AuthenticationService) {
         self.navigation = navigation
@@ -21,6 +27,13 @@ class LoginCoordinator {
 extension LoginCoordinator: Coordinator {
     func run() {
         let loginVC = LoginViewController(authService: authService)
+        loginVC.delegate = self
         self.navigation.pushViewController(loginVC, animated: false)
+    }
+}
+
+extension LoginCoordinator: LoginViewControllerDelegate {
+    func loginVCDidLogin() {
+        delegate?.loginCoordinatorDidLogIn()
     }
 }

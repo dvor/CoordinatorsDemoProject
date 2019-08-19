@@ -21,6 +21,12 @@ extension AppCoordinator: Coordinator {
     }
 }
 
+extension AppCoordinator: LoginCoordinatorDelegate {
+    func loginCoordinatorDidLogIn() {
+        updateCurrentCoordinator()
+    }
+}
+
 extension AppCoordinator: RunningCoordinatorDelegate {
     func runningCoordinatorDidLogOut() {
         updateCurrentCoordinator()
@@ -39,7 +45,10 @@ private extension AppCoordinator {
             coordinator = running
         }
         else {
-            coordinator = LoginCoordinator(navigation: navigation, authService: authService)
+            let login = LoginCoordinator(navigation: navigation, authService: authService)
+            login.delegate = self
+
+            coordinator = login
         }
 
         coordinator.run()
