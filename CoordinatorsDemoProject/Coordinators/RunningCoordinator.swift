@@ -6,9 +6,15 @@
 //  Copyright © 2019 Dmytro Vorobiov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class RunningCoordinator: Coordinator {
+class RunningCoordinator {
+    init(navigation: UINavigationController) {
+
+    }
+}
+
+extension RunningCoordinator: Coordinator {
     func run() {
 
     }

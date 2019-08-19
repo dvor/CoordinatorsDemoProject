@@ -6,9 +6,15 @@
 //  Copyright © 2019 Dmytro Vorobiov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class LoginCoordinator: Coordinator {
+class LoginCoordinator {
+    init(navigation: UINavigationController) {
+
+    }
+}
+
+extension LoginCoordinator: Coordinator {
     func run() {
     }
 }

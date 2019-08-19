@@ -13,9 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var app: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let window = UIWindow(frame:UIScreen.main.bounds)
-
-        app = AppCoordinator(window: window)
+        app = AppCoordinator()
         app.run()
 
         return true
