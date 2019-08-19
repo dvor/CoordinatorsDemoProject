@@ -30,7 +30,7 @@ private extension AppCoordinator {
             coordinator = RunningCoordinator(navigation: navigation)
         }
         else {
-            coordinator = LoginCoordinator(navigation: navigation)
+            coordinator = LoginCoordinator(navigation: navigation, authService: authService)
         }
 
         coordinator.run()

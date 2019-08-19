@@ -20,12 +20,12 @@ extension DummyAuthenticationService: AuthenticationService {
         return defaults.bool(forKey: Keys.dummyLoggedInKey)
     }
 
-    func logIn(userName: String,
+    func logIn(name: String,
                password: String,
                completion: @escaping (() -> Void),
                failure: @escaping ((AuthenticationError) -> Void)) {
 
-        if userName == "test" && password == "123" {
+        if name == "Test" && password == "123" {
             let defaults = UserDefaults.standard
             defaults.set(true, forKey: Keys.dummyLoggedInKey)
             completion()

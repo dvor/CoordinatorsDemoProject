@@ -12,10 +12,10 @@ enum AuthenticationError: Error {
     case wrongCredentials
 }
 
-protocol AuthenticationService {
+protocol AuthenticationService: class {
     func isLoggedIn() -> Bool
 
-    func logIn(userName: String,
+    func logIn(name: String,
                password: String,
                completion: @escaping (() -> Void),
                failure: @escaping ((AuthenticationError) -> Void))
