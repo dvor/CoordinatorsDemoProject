@@ -3,14 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0C01E68EF84B06CDD988D96A /* Pods_CoordinatorsDemoProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8B428EC0E8F35D1EA01D95 /* Pods_CoordinatorsDemoProject.framework */; };
 		499A62F2230B4199002F8F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A62F1230B4199002F8F97 /* AppDelegate.swift */; };
-		499A62F4230B4199002F8F97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A62F3230B4199002F8F97 /* ViewController.swift */; };
-		499A62F7230B4199002F8F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499A62F5230B4199002F8F97 /* Main.storyboard */; };
 		499A62F9230B419E002F8F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499A62F8230B419E002F8F97 /* Assets.xcassets */; };
 		499A62FC230B419E002F8F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499A62FA230B419E002F8F97 /* LaunchScreen.storyboard */; };
 		499A6307230B419E002F8F97 /* CoordinatorsDemoProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A6306230B419E002F8F97 /* CoordinatorsDemoProjectTests.swift */; };
@@ -31,8 +29,6 @@
 		3097F62C49B229C19712A44F /* Pods-CoordinatorsDemoProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorsDemoProjectTests.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorsDemoProjectTests/Pods-CoordinatorsDemoProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		499A62EE230B4199002F8F97 /* CoordinatorsDemoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorsDemoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499A62F1230B4199002F8F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		499A62F3230B4199002F8F97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		499A62F6230B4199002F8F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		499A62F8230B419E002F8F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		499A62FB230B419E002F8F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		499A62FD230B419E002F8F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,11 +85,10 @@
 		499A62F0230B4199002F8F97 /* CoordinatorsDemoProject */ = {
 			isa = PBXGroup;
 			children = (
-				499A6312230B41D3002F8F97 /* Controllers */,
-				499A6311230B41CC002F8F97 /* Coordinators */,
+				499A631B230B4619002F8F97 /* Controllers */,
+				499A631C230B4623002F8F97 /* Coordinators */,
+				499A631A230B460C002F8F97 /* Views */,
 				499A62F1230B4199002F8F97 /* AppDelegate.swift */,
-				499A62F3230B4199002F8F97 /* ViewController.swift */,
-				499A62F5230B4199002F8F97 /* Main.storyboard */,
 				499A62F8230B419E002F8F97 /* Assets.xcassets */,
 				499A62FA230B419E002F8F97 /* LaunchScreen.storyboard */,
 				499A62FD230B419E002F8F97 /* Info.plist */,
@@ -110,18 +105,25 @@
 			path = CoordinatorsDemoProjectTests;
 			sourceTree = "<group>";
 		};
-		499A6311230B41CC002F8F97 /* Coordinators */ = {
+		499A631A230B460C002F8F97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Coordinators;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		499A6312230B41D3002F8F97 /* Controllers */ = {
+		499A631B230B4619002F8F97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		499A631C230B4623002F8F97 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		5B429BE34887880BD34B9405 /* Pods */ = {
@@ -132,7 +134,6 @@
 				B99A950F9C8E50870AC2C683 /* Pods-CoordinatorsDemoProjectTests.debug.xcconfig */,
 				3097F62C49B229C19712A44F /* Pods-CoordinatorsDemoProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -231,7 +232,6 @@
 			files = (
 				499A62FC230B419E002F8F97 /* LaunchScreen.storyboard in Resources */,
 				499A62F9230B419E002F8F97 /* Assets.xcassets in Resources */,
-				499A62F7230B4199002F8F97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499A62F4230B4199002F8F97 /* ViewController.swift in Sources */,
 				499A62F2230B4199002F8F97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,14 +336,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		499A62F5230B4199002F8F97 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				499A62F6230B4199002F8F97 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		499A62FA230B419E002F8F97 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
