@@ -19,6 +19,8 @@
 		499A6329230B4AC5002F8F97 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A6328230B4AC5002F8F97 /* Coordinator.swift */; };
 		499A632B230B4AF9002F8F97 /* RunningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A632A230B4AF9002F8F97 /* RunningCoordinator.swift */; };
 		499A632D230B4D78002F8F97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A632C230B4D78002F8F97 /* LoginViewController.swift */; };
+		499A632F230B5661002F8F97 /* SomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A632E230B5661002F8F97 /* SomeViewController.swift */; };
+		499A6333230B5889002F8F97 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A6332230B5889002F8F97 /* SettingsViewController.swift */; };
 		A73AD8AB0DF831F794CFEADC /* Pods_CoordinatorsDemoProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9B99932D48CE4646C96534 /* Pods_CoordinatorsDemoProjectTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		499A6328230B4AC5002F8F97 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		499A632A230B4AF9002F8F97 /* RunningCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningCoordinator.swift; sourceTree = "<group>"; };
 		499A632C230B4D78002F8F97 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		499A632E230B5661002F8F97 /* SomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewController.swift; sourceTree = "<group>"; };
+		499A6332230B5889002F8F97 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		643144AAB532EFBA3D481B7D /* Pods-CoordinatorsDemoProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorsDemoProject.debug.xcconfig"; path = "Target Support Files/Pods-CoordinatorsDemoProject/Pods-CoordinatorsDemoProject.debug.xcconfig"; sourceTree = "<group>"; };
 		8A9B99932D48CE4646C96534 /* Pods_CoordinatorsDemoProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoordinatorsDemoProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99A950F9C8E50870AC2C683 /* Pods-CoordinatorsDemoProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorsDemoProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-CoordinatorsDemoProjectTests/Pods-CoordinatorsDemoProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +106,6 @@
 				499A631B230B4619002F8F97 /* Controllers */,
 				499A631C230B4623002F8F97 /* Coordinators */,
 				499A6323230B476E002F8F97 /* Services */,
-				499A631A230B460C002F8F97 /* Views */,
 				499A62F1230B4199002F8F97 /* AppDelegate.swift */,
 				499A62F8230B419E002F8F97 /* Assets.xcassets */,
 				499A62FA230B419E002F8F97 /* LaunchScreen.storyboard */,
@@ -120,17 +123,12 @@
 			path = CoordinatorsDemoProjectTests;
 			sourceTree = "<group>";
 		};
-		499A631A230B460C002F8F97 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		499A631B230B4619002F8F97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				499A632C230B4D78002F8F97 /* LoginViewController.swift */,
+				499A6332230B5889002F8F97 /* SettingsViewController.swift */,
+				499A632E230B5661002F8F97 /* SomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -345,10 +343,12 @@
 				499A6325230B4784002F8F97 /* AuthenticationService.swift in Sources */,
 				499A6327230B478C002F8F97 /* DummyAuthenticationService.swift in Sources */,
 				499A6320230B4670002F8F97 /* LoginCoordinator.swift in Sources */,
+				499A6333230B5889002F8F97 /* SettingsViewController.swift in Sources */,
 				499A631E230B4668002F8F97 /* AppCoordinator.swift in Sources */,
 				499A632D230B4D78002F8F97 /* LoginViewController.swift in Sources */,
 				499A632B230B4AF9002F8F97 /* RunningCoordinator.swift in Sources */,
 				499A62F2230B4199002F8F97 /* AppDelegate.swift in Sources */,
+				499A632F230B5661002F8F97 /* SomeViewController.swift in Sources */,
 				499A6329230B4AC5002F8F97 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

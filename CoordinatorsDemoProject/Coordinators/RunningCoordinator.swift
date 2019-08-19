@@ -8,14 +8,41 @@
 
 import UIKit
 
-class RunningCoordinator {
-    init(navigation: UINavigationController) {
+protocol RunningCoordinatorDelegate: class {
+    func runningCoordinatorDidLogOut()
+}
 
+class RunningCoordinator {
+    private let navigation: UINavigationController
+    private let authService: AuthenticationService
+
+    weak var delegate: RunningCoordinatorDelegate?
+
+    init(navigation: UINavigationController, authService: AuthenticationService) {
+        self.navigation = navigation
+        self.authService = authService
     }
 }
 
 extension RunningCoordinator: Coordinator {
     func run() {
+        let vc = SomeViewController()
+        vc.delegate = self
+        navigation.pushViewController(vc, animated: false)
+    }
+}
 
+extension RunningCoordinator: SomeViewControllerDelegate {
+    func someVCSettingsSelected() {
+        let settingsVC = SettingsViewController()
+        settingsVC.delegate = self
+        navigation.pushViewController(settingsVC, animated: true)
+    }
+}
+
+extension RunningCoordinator: SettingsViewControllerDelegate {
+    func settingsVCLogOut() {
+        authService.logOut()
+        delegate?.runningCoordinatorDidLogOut()
     }
 }

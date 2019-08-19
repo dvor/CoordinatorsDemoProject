@@ -21,13 +21,22 @@ extension AppCoordinator: Coordinator {
     }
 }
 
+extension AppCoordinator: RunningCoordinatorDelegate {
+    func runningCoordinatorDidLogOut() {
+        updateCurrentCoordinator()
+    }
+}
+
 private extension AppCoordinator {
     func updateCurrentCoordinator() {
         let navigation = UINavigationController()
         window.rootViewController = navigation
 
         if authService.isLoggedIn() {
-            coordinator = RunningCoordinator(navigation: navigation)
+            let running = RunningCoordinator(navigation: navigation, authService: authService)
+            running.delegate = self
+
+            coordinator = running
         }
         else {
             coordinator = LoginCoordinator(navigation: navigation, authService: authService)
